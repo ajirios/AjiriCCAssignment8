@@ -14,7 +14,7 @@ public class AsyncApplication
 		ConcurrentMap<Integer, Integer> map = new ConcurrentHashMap<Integer, Integer>();
 		List<CompletableFuture<List<Integer>>> completableFuturesList = new ArrayList<CompletableFuture<List<Integer>>>();
 		Assignment8 assignment = new Assignment8();
-		ExecutorService executor = Executors.newFixedThreadPool(8);
+		ExecutorService executor = Executors.newCachedThreadPool();
 		   
 	    for (int i = 0; i < 1000; i++) 
 	    {
